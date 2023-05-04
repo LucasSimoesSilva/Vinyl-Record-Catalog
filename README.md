@@ -1,8 +1,9 @@
 # Catálogo de Discos
 
 ## Tecnologias utilizadas
+- Apache-maven-3.8.6
 - Banco de dados: MySql
-- IDE: Itellij
+- IDE: IntelliJ IDEA Communit Edition 2022.2.3
 - Linguagem: Java JDK 17.0.3.1
 - Framework: Spring Framework 3.0.1
 - Interface gráfica: JavaFx
