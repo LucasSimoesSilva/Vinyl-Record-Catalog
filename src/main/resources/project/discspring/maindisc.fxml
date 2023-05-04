@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import java.util.ArrayList?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="473.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.discspring.controller.MainDiscController">
+    <Label layoutX="116.0" layoutY="14.0" text="Organizador de Discos">
+<!--        <font>-->
+<!--            <Font size="24.0" />-->
+<!--        </font>-->
+    </Label>
+    <TitledPane fx:id="paneMain" animated="false" collapsible="false" layoutX="36.0" layoutY="302.0" text="Insira os dados">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="400.0">
+            <TextField fx:id="name_area" layoutX="62.0" layoutY="26.0" prefHeight="25.0" prefWidth="222.0" />
+            <TextField fx:id="singer_area" layoutX="62.0" layoutY="77.0" prefHeight="25.0" prefWidth="222.0" />
+            <TextField fx:id="num_area" layoutX="70.0" layoutY="129.0" prefHeight="25.0" prefWidth="214.0" />
+            <Label layoutX="10.0" layoutY="28.0" text="Nome:">
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+            </Label>
+            <Label layoutX="10.0" layoutY="79.0" text="Cantor:">
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+            </Label>
+            <Label layoutX="10.0" layoutY="131.0" text="Número:">
+<!--                <font>-->
+<!--                    <Font size="15.0" />-->
+<!--                </font>-->
+            </Label>
+            <Button fx:id="bConfirm" layoutX="24.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#addDisc" prefHeight="25.0" prefWidth="76.0" text="Confirmar" />
+            <Button fx:id="bCancel" layoutX="287.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="25.0" prefWidth="73.0" text="Cancelar" />
+            <Button fx:id="bClean" layoutX="147.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#cleanText" text="Limpar campos" />
+        </AnchorPane>
+    </TitledPane>
+    <TableView fx:id="tableDiscs" layoutY="55.0" onMouseClicked="#selectCellTable" prefHeight="200.0" prefWidth="473.0">
+        <columns>
+            <TableColumn fx:id="columnName" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="columnSinger" prefWidth="75.0" text="Cantor" />
+            <TableColumn fx:id="columnNum" prefWidth="75.0" text="Número" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <Button fx:id="bAdd" layoutX="36.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#startProcess" text="Adicionar" />
+    <Button fx:id="bEdit" layoutX="206.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#editDisc" prefHeight="25.0" prefWidth="61.0" text="Editar" />
+    <Button fx:id="bDelete" layoutX="371.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#deleteDisc" prefHeight="25.0" prefWidth="67.0" text="Deletar" />
+    <TitledPane fx:id="paneData" animated="false" collapsible="false" layoutX="34.0" layoutY="592.0" prefHeight="149.0" prefWidth="402.0" text="Dados">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="400.0">
+                <children>
+                    <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="126.0" text="Quantidade de discos:" />
+                    <Label layoutX="13.0" layoutY="53.0" text="Cantor com mais discos:" />
+                    <Label fx:id="maxDiscs" layoutX="140.0" layoutY="14.0" prefHeight="17.0" prefWidth="83.0" />
+                    <Label fx:id="bestSinger" layoutX="151.0" layoutY="53.0" prefHeight="17.0" prefWidth="114.0" />
+                </children>
+            </AnchorPane>
+        </content>
+    </TitledPane>
+
+    <fx:define>
+        <ArrayList fx:id="buttonDisc">
+            <fx:reference source="bConfirm" />
+            <fx:reference source="bCancel" />
+            <fx:reference source="bClean" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="texFieldList">
+            <fx:reference source="name_area" />
+            <fx:reference source="singer_area" />
+            <fx:reference source="num_area" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="buttonControl">
+            <fx:reference source="bAdd" />
+            <fx:reference source="bDelete" />
+            <fx:reference source="bEdit" />
+        </ArrayList>
+    </fx:define>
+</AnchorPane>
