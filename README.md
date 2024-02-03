@@ -1,25 +1,43 @@
-# Catálogo de Discos
+<h1 align="center" id="title">Vinyl Records Catalog</h1>  
 
-## Tecnologias utilizadas
-- Banco de dados: MySql
-- IDE: Itellij
-- Linguagem: Java JDK 17.0.3.1
-- Framework: Spring Framework 3.0.1
-- Interface gráfica: JavaFx
+<p id="description">Functional API with Graphic interface that can catalog vinyl records.</p>  
+</br>  
+<h2>🧐 Features</h2>  
 
-### Sistema operacional
-- Windows 10
+*   You can add, delete and edit vinyl records
 
-**How to run:**<br>
-Clone the repository in a folder.
-Open the project in your preferential IDE and just run the main application.
+</br>
 
-**Alternative to run :**<br>
-Clone the repository in a folder.
-Open a terminal or command prompt at your cloned project folder.
-Execute: mvn clean install
-Run the command: mvn spring-boot:run or java -jar .\target\AgenciaViagem-0.0.1-SNAPSHOT.jar to have the API running at port 8089.
+<h2>💻 Built with</h2>
+*   SO: Windows 10
+*   Language: Java 17
+*   Helpful technologies: Maven
+*   IDE: IntelliJ IDEA 2023.2.3 (Ultimate Edition)
+*   Database: MySql
+*   Framework: Spring Framework 3.0.1
+*   Graphic interface: JavaFx
 
-**Tips:**<br>
-Check your java version in your terminal command prompt: java --version
-Check your apache mavem version in your terminal command prompt: mvn --version
+</br>  
+
+<h2>🚀 Mandatory Technologies to run</h2>
+
+- [Java 17 or later](https://www.oracle.com/br/java/technologies/downloads/)
+- [Maven](https://maven.apache.org/download.cgi)
+- [MySql](https://www.mysql.com/downloads/)
+
+</br>  
+
+<h2>🛠️ How to use:</h2>
+
+- You need [Git](https://git-scm.com/)
+- In the terminal:
+
+```bash  
+# Clone the project  
+$ git clone https://github.com/LucasSimoesSilva/Vinyl-Record-Catalog.git  
+```  
+
+- Go to the folder in your IDECadastro-Disco/src/main/resources/application.properties
+  - Change the database url, username and password to your respective data
+- Go to the folder in your IDECadastro-Disco/src/main/java/project/discspring
+- So in your favorite IDE run the class DiscSpringApplication with the method and the parameters that you want
