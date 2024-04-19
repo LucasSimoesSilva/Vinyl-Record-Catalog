@@ -38,7 +38,7 @@
 $ git clone https://github.com/LucasSimoesSilva/Vinyl-Record-Catalog.git  
 ```  
 
-- Go to the folder in your IDECadastro-Disco/src/main/resources/application.properties
+- Go to the folder in your IDE: Cadastro-Disco/src/main/resources/application.properties
   - Change the database url, username and password to your respective data
-- Go to the folder in your IDECadastro-Disco/src/main/java/project/discspring
+- Go to the folder in your IDE: Cadastro-Disco/src/main/java/project/discspring
 - So in your favorite IDE run the class DiscSpringApplication with the method and the parameters that you want
